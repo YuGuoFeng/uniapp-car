@@ -1,0 +1,17 @@
+{
+  "pages": [
+    "pages/myDetail/index",
+    "pages/index/index",
+    "pages/myCenter/index",
+    "pages/myPartIn/index",
+    "pages/myRecord/index"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "扫码登记",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "usingComponents": {}
+}
