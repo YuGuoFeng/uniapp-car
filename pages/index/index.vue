@@ -82,31 +82,21 @@
 		},
 		// components:{UniCard},
 		methods: {
-			getData() {
+			async getData() {
 				console.log('获取数据接口')
-				uni.request({
-					url: 'https://www.example.com/request', //仅为示例，并非真实接口地址。
-					data: {
-						text: 'uni.request'
-					},
-					header: {
-						'custom-header': 'hello' //自定义请求头信息
-					},
-					success: (res) => {
-						console.log(res.data);
-						this.text = 'request success';
-					}
-				});
+				const res = await this.$myRequest({
+					url: '',
+				})
 			},
 			// 图片的方法
 			imageError: function(e) {
 				console.error('image发生error事件，携带值为' + e.detail.errMsg)
 			},
-			
+
 			// 我参与的登记
-			toPartIn(){
+			toPartIn() {
 				uni.navigateTo({
-					url:'/pages/myPartIn/index'
+					url: '/pages/myPartIn/index'
 				})
 			}
 		}
@@ -153,42 +143,47 @@
 			line-height: 50rpx;
 			border-bottom: 2rpx solid #DCDCDC;
 		}
-		.content_1{
+
+		.content_1 {
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
-			.content{
-				font-size:  34rpx;
+
+			.content {
+				font-size: 34rpx;
 				width: 50%;
 				height: 200rpx;
 				border-right: 2rpx solid #DCDCDC;
 				text-align: center;
-			   
-				.font_1{
+
+				.font_1 {
 					margin-top: 50rpx;
 					font-size: 50rpx;
 					color: #FB954F;
-					
+
 				}
-				.font_style{
+
+				.font_style {
 					margin-top: 10rpx;
 					display: block;
 				}
 			}
+
 			// two
-			.right{
-				font-size:  34rpx;
+			.right {
+				font-size: 34rpx;
 				width: 50%;
 				height: 200rpx;
 				text-align: center;
-			   
-				.font_1{
+
+				.font_1 {
 					margin-top: 50rpx;
 					font-size: 60rpx;
 					color: #20B923;
-					
+
 				}
-				.font_style{
+
+				.font_style {
 					// margin-top: 10rpx;
 					display: block;
 				}
