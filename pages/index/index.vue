@@ -10,7 +10,7 @@
 							mode="scaleToFill" :src="src" @error="imageError"></image>
 					</view>
 					<view class="font_1">
-						三七
+						悟空-八戒
 					</view>
 				</view>
 
